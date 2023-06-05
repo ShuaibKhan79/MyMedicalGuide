@@ -1,0 +1,18 @@
+﻿@using System.Collections
+@using Kendo.Mvc.UI
+@model MyMedicalGuide.Web.Models.Appointments.AppointmentInputModel
+@{
+    ViewBag.Title = "Register";
+}
+
+@Html.EditorForModel(Model);
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/kendo")
+}
+
+@section KendoStyles{
+    @Styles.Render("~/Content/kendo")
+}

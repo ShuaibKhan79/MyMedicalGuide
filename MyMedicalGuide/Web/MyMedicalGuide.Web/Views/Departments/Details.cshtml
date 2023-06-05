@@ -1,0 +1,7 @@
+﻿@model MyMedicalGuide.Web.Models.Departments.DepartmentViewModel
+@Html.Partial("_DepartmentCardPartial", Model)
+<div class="row center">
+    <div class="row">
+        @Html.Action("GetDoctors", "Doctors", new { departmentId = Model.Id, hospitalId = TempData["hospitalId"] })
+    </div>
+</div>

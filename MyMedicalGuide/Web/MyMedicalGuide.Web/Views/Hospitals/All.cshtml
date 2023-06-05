@@ -1,0 +1,19 @@
+﻿@model MyMedicalGuide.Web.Models.Home.IndexViewModel
+<div class="container">
+    </br>
+    <div class="row">
+        @using (Html.BeginForm("All", "Hospitals", FormMethod.Get))
+        {
+            @Html.Partial("_SearchPartial");
+        }
+    </div>
+    <div class="row">
+        @foreach (var hospital in Model.Hospitals)
+        {
+            @Html.DisplayFor(model => hospital);
+        }
+    </div>
+</div>
+
+@Html.Partial("_PaginationPartial", Model)
+
